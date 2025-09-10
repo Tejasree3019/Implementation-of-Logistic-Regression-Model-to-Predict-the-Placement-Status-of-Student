@@ -75,10 +75,13 @@ confusion = confusion_matrix(y_test, y_pred)
 classification_report1 = classification_report(y_test, y_pred)
 
 print("\nAccuracy:", accuracy)
-print("Confusion Matrix:\n", confusion)
+
 print("Classification Report:\n", classification_report1)
 print("\nY Prediction Array:")
 print(y_pred)
+from sklearn import metrics
+cm_display=metrics.ConfusionMatrixDisplay(confusion_matrix=confusion,display_labels=[True,False])
+cm_display.plot()
 
 */
 ```
@@ -111,7 +114,8 @@ Accuracy value:
 
 Confusion Matix:
 
-<img width="251" height="84" alt="image" src="https://github.com/user-attachments/assets/bbfcd2ea-1e68-4e15-bb67-8e7dfbf9eafc" />
+<img width="1001" height="799" alt="image" src="https://github.com/user-attachments/assets/b6dc4832-e85a-48f4-859e-29170354b677" />
+
 
 Classification Report :
 
